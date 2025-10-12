@@ -1,16 +1,26 @@
 import Navbar from './components/Navbar'
 import HomePage from './components/HomePage'
 import Footer from './components/Footer'
+import AboutPage from './components/AboutPage'
 import './App.css'
+import MouseSmoke from './components/MouseSmoke'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 
 function App() {
   return (
-    <div className="app">
-      <Navbar />
-      <HomePage />
-      <Footer />
-    </div>
-  )
+    <Router>
+      <div className="app">
+        <MouseSmoke />
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
+  );
 }
 
 export default App

@@ -47,8 +47,8 @@ function HomePage() {
         </div>
       </main>
 
-      <section className="about-section" id="about">
-        <div className="about-container">
+      <section className="aboutHome-section" id="aboutHome">
+        <div className="aboutHome-container">
           <h2>About The Show</h2>
           <p>
             The Athlete's Insider Guide breaks down the science behind athletic performance 

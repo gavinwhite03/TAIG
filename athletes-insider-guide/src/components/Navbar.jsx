@@ -7,11 +7,11 @@ function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
 
   const menuItems = [
-    { label: 'HOME', href: '#home' },
-    { label: 'ABOUT', href: '#about' },
-    { label: 'EPISODES', href: '#episodes' },
-    { label: 'BLOG', href: '#blog' },
-    { label: 'NEWSLETTER', href: '#newsletter' },
+    { label: 'HOME', href: '/home' },
+    { label: 'ABOUT', href: '/about' },
+    { label: 'EPISODES', href: '/episodes' },
+    { label: 'BLOG', href: '/blog' },
+    { label: 'NEWSLETTER', href: '/newsletter' },
   ]
 
   const dropdownItems = [
