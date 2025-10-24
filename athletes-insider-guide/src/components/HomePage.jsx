@@ -59,8 +59,8 @@ function HomePage() {
             Whether you're a competitive athlete, weekend warrior, or fitness enthusiast, 
             we translate complex sports science into strategies you can use today.
           </p>
-          <a href="#episodes" className="episodes-button">
-            Explore Episodes
+          <a href="/about" className="about-button">
+            Learn More
           </a>
         </div>
       </section>

@@ -185,7 +185,7 @@
 }
 
 /* Animated Button */
-.episodes-button {
+.about-button {
   display: inline-block;
   margin-top: 2rem;
   padding: 1rem 2.5rem;
@@ -203,7 +203,7 @@
   box-shadow: 0 4px 15px rgba(120, 148, 255, 0.4);
 }
 
-.episodes-button::before {
+.about-button::before {
   content: '';
   position: absolute;
   top: 0;
@@ -214,22 +214,22 @@
   transition: left 0.5s ease;
 }
 
-.episodes-button:hover {
+.about-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(120, 148, 255, 0.6);
 }
 
-.episodes-button:hover::before {
+.about-button:hover::before {
   left: 100%;
 }
 
-.episodes-button:active {
+.about-button:active {
   transform: translateY(0);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .episodes-button {
+  .about-button {
     padding: 0.875rem 2rem;
     font-size: 1rem;
   }

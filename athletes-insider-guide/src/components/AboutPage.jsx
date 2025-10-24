@@ -1,6 +1,57 @@
+import { useEffect } from 'react'
 import './AboutPage.css'
+import alexProfile from '../assets/Images/Alex_Profile.jpg'
 
 function AboutPage() {
+  useEffect(() => {
+    // Card carousel logic
+    const cards = document.querySelectorAll('.card')
+    let currentCard = 0
+
+    const updateCards = () => {
+      cards.forEach((card, index) => {
+        card.classList.remove('card--left', 'card--left-far', 'card--center', 'card--right', 'card--right-far')
+        
+        const diff = (index - currentCard + cards.length) % cards.length
+        
+        if (diff === 0) {
+          card.classList.add('card--center')
+        } else if (diff === 1) {
+          card.classList.add('card--right')
+        } else if (diff === 2) {
+          card.classList.add('card--right-far')
+        } else if (diff === cards.length - 1) {
+          card.classList.add('card--left')
+        }
+      })
+    }
+
+    const handleCardClick = (e) => {
+      const clickedCard = e.currentTarget
+      const cardIndex = parseInt(clickedCard.getAttribute('data-card'))
+      
+      if (cardIndex !== currentCard) {
+        currentCard = cardIndex
+        updateCards()
+      }
+    }
+
+    // Add click listeners
+    cards.forEach((card) => {
+      card.addEventListener('click', handleCardClick)
+    })
+
+    // Initialize cards
+    updateCards()
+
+    // Cleanup
+    return () => {
+      cards.forEach((card) => {
+        card.removeEventListener('click', handleCardClick)
+      })
+    }
+  }, [])
+
   return (
     <div className="about-page">
       {/* Hero Section */}
@@ -68,31 +119,50 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* Host Section */}
-      <section className="about-section host-section">
-        <div className="section-container">
-          <h2>Meet Your Host</h2>
-          <div className="host-content">
-            <div className="host-image">
-              <img src="/host-photo.jpg" alt="Host" />
-            </div>
-            <div className="host-bio">
-              <h3>Your Name</h3>
-              <p className="host-title">Sports Science Enthusiast & Performance Coach</p>
-              <p>
-                With a background in exercise science and years of experience working with athletes 
-                across multiple sports, I'm passionate about translating research into results. 
-                My goal is to help you cut through the noise and focus on what actually works.
-              </p>
-              <p>
-                When I'm not recording episodes or diving into the latest research, you can find me 
-                training in the gym, competing in [your sport], or experimenting with new recovery 
-                protocols on myself.
-              </p>
-            </div>
+      {/* Interactive Cards Section */}
+      <h1>Our Hosts</h1>
+      <div className="cards">
+        <div className="card" data-card="0">
+          <div className="card__image">
+            <img src={alexProfile} alt="Host 1" />
+          </div>
+          <div className="card__content">
+            <h3>Alex Housley</h3>
+            <p className="card__role">Lead Coach & Researcher</p>
+            <p className="card__bio">My name is Alex Housley. I am currently undergoing my master's in sport and exercise psychology at Loughborough University. I obtained a first-class honors degree in sport and exercise science from York St. John University, where I played for i2i Soccer Academy. I grew up playing several sports, but eventually decided to focus on soccer. I have competed at the amateur and semi-pro levels in the UPSL and NPSL in the US. My interest in sports psychology began in my first year of university when I took a class that highlighted the growing need for mental skills coaching and psychological services for athletes and individuals of all ages. There is a stigma around sports psychology, but the main goal of sports and performance psychology is to help individuals develop the mental skills to enhance their overall performance in sport.</p>
           </div>
         </div>
-      </section>
+        <div className="card" data-card="1">
+          <div className="card__image">
+            <img src="/host2.jpg" alt="Host 2" />
+          </div>
+          <div className="card__content">
+            <h3>Hayden Habetz</h3>
+            <p className="card__role">Performance Nutritionist</p>
+            <p className="card__bio">Brief bio about this host and their expertise in nutrition.</p>
+          </div>
+        </div>
+        <div className="card" data-card="2">
+          <div className="card__image">
+            <img src="/host3.jpg" alt="Host 3" />
+          </div>
+          <div className="card__content">
+            <h3>Cole Worden</h3>
+            <p className="card__role">Mental Performance Coach</p>
+            <p className="card__bio">Brief bio about this host and their expertise in psychology.</p>
+          </div>
+        </div>
+        <div className="card" data-card="3">
+          <div className="card__image">
+            <img src="/host4.jpg" alt="Host 4" />
+          </div>
+          <div className="card__content">
+            <h3>Rishi Srinivasan</h3>
+            <p className="card__role">Strength & Conditioning Expert</p>
+            <p className="card__bio">Brief bio about this host and their expertise in training.</p>
+          </div>
+        </div>
+      </div>
 
       {/* CTA Section */}
       <section className="about-cta">

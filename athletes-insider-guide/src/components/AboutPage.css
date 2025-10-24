@@ -1,5 +1,11 @@
+h1 {
+  text-align: center;
+  padding-bottom: 25px;
+  font-size: 60px;
+}
+
 .about-page {
-  padding-top: 80px; /* Account for fixed navbar */
+  padding-top: 80px;
 }
 
 /* Hero Section */
@@ -251,5 +257,185 @@
   .cta-button {
     width: 100%;
     max-width: 300px;
+  }
+}
+
+.cards
+{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:center;
+  position: relative;
+  height:35rem;
+  width:100%;
+}
+
+.card
+{
+  display:flex;
+  flex-direction: row;
+  background: #1a1a1a;
+  width:52.5rem;
+  height:30rem;
+  color: #1a1a1a;
+  border: none;
+  transform-origin:center center;
+  transform:scale(1) translate(0px,0px) perspective( 750px ) rotateY(0deg);
+  transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+  transition-duration: 0.5s;
+  position:absolute;
+  top:0;
+  box-shadow:0 30px 50px rgba(0,0,0,0.1);
+  z-index:3;
+  cursor: pointer;
+  overflow:hidden;
+}
+
+.card *
+{
+  pointer-events: none;
+}
+
+.card--left
+{
+  transform:scale(0.75) translate(-420px,0px) perspective( 750px ) rotateY(10deg);
+  box-shadow:0 15px 25px rgba(0,0,0,0.1);
+  z-index:1;
+}
+
+.card--center
+{
+  transform:scale(1) translate(0px, 0px) perspective( 750px ) rotateY(0deg);
+  box-shadow:0 30px 50px rgba(0,0,0,0.1);
+  z-index:3;
+}
+
+.card--right
+{
+  transform:scale(0.75) translate(420px,0px) perspective( 750px ) rotateY(-10deg);
+  box-shadow:0 15px 25px rgba(0,0,0,0.1);
+  z-index:1;
+}
+
+.card--right-far
+{
+  transform:scale(0.6) translate(560px,0px) perspective(750px) rotateY(-15deg);
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.card--left-far
+{
+  transform:scale(0.6) translate(-560px,0px) perspective(750px) rotateY(15deg);
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.card__image
+{
+  position: relative;
+  left: 0%;
+  width: 40%;
+  height: 100%;
+  overflow: hidden;
+  background: #f6f4f0;
+  flex-shrink: 0;
+}
+
+.card__image img
+{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card__content
+{
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card__content h3
+{
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.card__role
+{
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.card__bio
+{
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.card__content h3
+{
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.card__role
+{
+  font-size: 0.9rem;
+  color: white;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.card__bio
+{
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: white;
+  margin: 0;
+}
+
+@media only screen and (max-width : 736px)
+{
+  .cards
+  {
+    flex-direction:column;
+    margin:auto 0;
+  }
+
+  .card
+  {
+    display:flex;
+    width:90%;
+  }
+
+  .card--left
+  {
+    transform:scale(0.75) translate(0px, -150px) perspective(750px) rotateY(0) rotateX(-10deg) translateZ(-5px);
+  }
+
+  .card--center
+  {
+    transform:scale(1) translate(0px, 0px) perspective( 750px ) rotateY(0deg)  rotateX(0deg) translateZ(5px);
+  }
+
+  .card--right
+  {
+    transform:scale(0.75) translate(0px, 150px) perspective(750px) rotateY(0) rotateX(10deg) translateZ(-5px);
+  }
+
+  .card__icon:before
+  {
+    transform:scale(0.75);
   }
 }
