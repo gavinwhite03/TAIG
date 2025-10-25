@@ -15,8 +15,8 @@ function Navbar() {
   ]
 
   const dropdownItems = [
-    { label: 'Recommended Reading', href: '#reading' },
-    { label: 'Resources', href: '#resources' },
+    { label: 'Recommended Reading', href: '/reading' },
+    { label: 'Resources', href: '/resources' },
   ]
 
   return (
