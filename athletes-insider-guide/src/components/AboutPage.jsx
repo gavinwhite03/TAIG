@@ -170,10 +170,10 @@ function AboutPage() {
           <h2>Ready to Level Up Your Training?</h2>
           <p>Join thousands of athletes who are training smarter with science-backed insights</p>
           <div className="cta-buttons">
-            <a href="#episodes" className="cta-button primary">
+            <a href="/episodes" className="cta-button primary">
               Listen to Episodes
             </a>
-            <a href="#newsletter" className="cta-button secondary">
+            <a href="/newsletter" className="cta-button secondary">
               Subscribe to Newsletter
             </a>
           </div>

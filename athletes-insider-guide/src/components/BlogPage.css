@@ -1,0 +1,270 @@
+.blog-page {
+  padding-top: 80px;
+}
+
+/* Loading State */
+.loading {
+  text-align: center;
+  padding: 4rem 2rem;
+  font-size: 1.5rem;
+  color: #666;
+}
+
+/* Hero Section */
+.blog-hero {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.blog-hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  letter-spacing: -0.03em;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #e5e5e5;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Filters Section */
+.blog-filters {
+  background: white;
+  padding: 2rem;
+  border-bottom: 2px solid #e5e5e5;
+  position: sticky;
+  top: 80px;
+  z-index: 10;
+}
+
+.filters-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filter-button {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #e5e5e5;
+  background: white;
+  color: #4a4a4a;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-button:hover {
+  border-color: #1a1a1a;
+  background: #f6f4f0;
+}
+
+.filter-button.active {
+  background: #1a1a1a;
+  color: white;
+  border-color: #1a1a1a;
+}
+
+/* Blog Grid Section */
+.blog-grid-section {
+  padding: 4rem 2rem;
+  background: #f6f4f0;
+  min-height: 60vh;
+}
+
+.blog-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.no-posts {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.no-posts p {
+  font-size: 1.25rem;
+  color: #666;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+/* Blog Card */
+.blog-card {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.blog-card-image {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  background: #e5e5e5;
+}
+
+.blog-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover .blog-card-image img {
+  transform: scale(1.05);
+}
+
+.blog-card-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 1rem;
+}
+
+.blog-card-content {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card-categories {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.blog-card-category {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: #f6f4f0;
+  color: #1a1a1a;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 20px;
+}
+
+.blog-card-content h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.blog-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 0.875rem;
+}
+
+.blog-card-author {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.blog-card-date {
+  color: #666;
+}
+
+.blog-card-excerpt {
+  color: #4a4a4a;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.read-more {
+  color: #1a1a1a;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: gap 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.blog-card:hover .read-more {
+  gap: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .blog-hero {
+    padding: 3rem 1.5rem;
+  }
+
+  .blog-hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.125rem;
+  }
+
+  .blog-filters {
+    padding: 1.5rem 1rem;
+  }
+
+  .filters-container {
+    gap: 0.75rem;
+  }
+
+  .filter-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .blog-grid-section {
+    padding: 2rem 1rem;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .blog-card-content h2 {
+    font-size: 1.25rem;
+  }
+}
