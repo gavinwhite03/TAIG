@@ -51,9 +51,7 @@ function HomePage() {
         <div className="aboutHome-container">
           <h2>About The Show</h2>
           <p>
-            The Athlete's Insider Guide breaks down the science behind athletic performance 
-            into practical, actionable insights. Each episode explores cutting-edge research, 
-            expert interviews, and real-world applications to help you train smarter, not harder.
+            The Athletes’ Insider Guide is dedicated to providing clear, evidence-based insights across key areas of sports science (i.e. sports psychology, physical therapy, strength and conditioning). Our goal is not to present definitive answers, but to empower athletes, coaches, and enthusiasts to deepen their understanding of the science behind performance. Whether you’re a beginner or an experienced athlete, our content is designed to be accessible, practical, and grounded in research. We aim to equip our audience with knowledge and resources that enhance performance, support continuous learning, and inspire further exploration into the world of sport science.
           </p>
           <p>
             Whether you're a competitive athlete, weekend warrior, or fitness enthusiast, 

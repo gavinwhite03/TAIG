@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import './AboutPage.css'
 import alexProfile from '../assets/Images/Alex_Profile.jpg'
+import rishiProfile from '../assets/Images/Rishi_Profile.jpg'
 
 function AboutPage() {
   useEffect(() => {
@@ -69,9 +70,9 @@ function AboutPage() {
         <div className="section-container">
           <h2>Our Mission</h2>
           <p>
-            The Athlete's Insider Guide exists to demystify sports science and make cutting-edge 
-            research accessible to everyone. We translate complex studies into actionable insights 
-            that help athletes of all levels train smarter, recover better, and perform at their peak.
+            In today’s world, athletes are surrounded by countless sources of information on strength and conditioning, rehabilitation, sport psychology, and performance science. Unfortunately, it can be difficult to separate credible, evidence-based insights from misinformation. Too often, advice is presented as a one-size-fits-all solution, yet every athlete is unique, and what works for one may not work for another.
+            <br />At The Athletes’ Insider Guide (TAIG), our mission is to provide athletes of all ages with scientifically grounded information that empowers them to better understand their own performance and development. We aim to help athletes, coaches, parents, and support staff make informed decisions by offering accurate, research-based resources.
+            <br />Our goal is not only to share reliable information but also to encourage continued learning. We invite all visitors to explore our recommended readings and resources, created and curated by professionals in the field, to deepen their understanding and take control of their athletic journey.
           </p>
           <p>
             Whether you're a competitive athlete, weekend warrior, or fitness enthusiast, we believe 
@@ -154,12 +155,12 @@ function AboutPage() {
         </div>
         <div className="card" data-card="3">
           <div className="card__image">
-            <img src="/host4.jpg" alt="Host 4" />
+            <img src={rishiProfile} alt="Host 4" />
           </div>
           <div className="card__content">
             <h3>Rishi Srinivasan</h3>
             <p className="card__role">Strength & Conditioning Expert</p>
-            <p className="card__bio">Brief bio about this host and their expertise in training.</p>
+            <p className="card__bio">I’m a former soccer player who spent three years competing in Europe before choosing to channel my passion for sport into a long-term career. I hold a bachelor’s degree in Sports and Exercise Science and am currently pursuing my Doctorate in Physical Therapy. My goal is to combine my playing experience and academic background to help athletes recover from injuries, optimize performance, and stay injury-free.</p>
           </div>
         </div>
       </div>

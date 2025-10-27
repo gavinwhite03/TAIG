@@ -2,20 +2,20 @@
 import { useEffect, useRef } from "react";
 
 function SplashCursor({
-  SIM_RESOLUTION = 128,
-  DYE_RESOLUTION = 1440,
+  SIM_RESOLUTION = 64,
+  DYE_RESOLUTION = 720,
   CAPTURE_RESOLUTION = 512,
-  DENSITY_DISSIPATION = 7,
+  DENSITY_DISSIPATION = 9,
   VELOCITY_DISSIPATION = 4,
   PRESSURE = 0.1,
-  PRESSURE_ITERATIONS = 20,
+  PRESSURE_ITERATIONS = 30,
   CURL = 5,
   SPLAT_RADIUS = 0.2,
-  SPLAT_FORCE = 3000,
+  SPLAT_FORCE = 2000,
   SHADING = true,
-  COLOR_UPDATE_SPEED = 2,
-  BACK_COLOR = { r: 0.5, g: 0, b: 0 },
-  TRANSPARENT = false,
+  COLOR_UPDATE_SPEED = 0,
+  BACK_COLOR = { r: 1, g: 0, b: 0 },
+  TRANSPARENT = true,
 }) {
   const canvasRef = useRef(null);
 
